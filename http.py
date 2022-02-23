@@ -1,6 +1,11 @@
 from ipxeBuilder import Builder, Menu, Item, Echo, Loader
 
+class Start:
+	def code():
+		return ":start"
+
 builder=Builder()
+builder.add(Start)
 
 menu=Menu("menu")
 

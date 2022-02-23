@@ -57,4 +57,10 @@ class Loader(Command):
 		self.kernel_path=path
 
 	def code(self):
-		return f"kernel {self.kernel_path} "+" ".join([f"initrd={i.split("/")[-1]}" for i in self.initrds])+"\n"+'\n'.join([f"initrd {i}" for i in self.initrds])+"\nboot\n"
+		ret=f"kernel {self.kernel_path} "
+		for i in self.initrds:
+			d=i.split("/")[-1]
+			ret += f" initrd={d}"
+		for i in self.initrds:
+			ret+=f"\ninitrd {i}"
+		ret+="\nboot\n"

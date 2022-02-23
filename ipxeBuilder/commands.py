@@ -64,3 +64,4 @@ class Loader(Command):
 		for i in self.initrds:
 			ret+=f"\ninitrd {i}"
 		ret+="\nboot\n"
+		return ret

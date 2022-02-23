@@ -2,7 +2,7 @@ from ipxeBuilder import Builder, Menu, Item, Echo, Loader
 
 class Start:
 	def code():
-		return ":start\n"
+		return ":start"
 
 builder=Builder()
 builder.add(Start)

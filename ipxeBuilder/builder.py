@@ -9,4 +9,4 @@ class Builder:
 		self.commands.append(command)
 
 	def build(self):
-		return "#!ipxe"+"\n".join([i.code() for i in self.commands]) 
+		return "#!ipxe\n"+"\n".join([i.code() for i in self.commands]) 
